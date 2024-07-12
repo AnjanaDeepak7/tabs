@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import data from "./components/data";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 function App() {
+  const [index, setIndex] = useState(0);
+
+  const handleClick = (order) => {
+    setIndex(order);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 className="main-heading">Experience</h1>
+      <div className="underline"></div>
+      <main className="main-container">
+        <nav className="nav-bar">
+          {data.map((job) => {
+            const { company, id, order } = job;
+            return (
+              <button
+                className="nav-btn"
+                key={id}
+                onClick={() => handleClick(order)}
+              >
+                {company}
+              </button>
+            );
+          })}
+        </nav>
+        <article className="art-container" key={data[index].id}>
+          <h3 className="title">{data[index].title}</h3>
+          <div className="company-container">
+            <h5 className="company">{data[index].company}</h5>
+          </div>
+          <p className="dates">{data[index].dates}</p>
+          {data[index].duties.map((duty) => {
+            return (
+              <div className="duty-container">
+                <MdKeyboardDoubleArrowRight className="arrow-btn" />
+                <p className="duty">{duty}</p>
+              </div>
+            );
+          })}
+        </article>
+      </main>
+    </>
   );
 }
 

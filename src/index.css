@@ -1,13 +1,99 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-heading {
+  margin: 3rem 1rem 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.underline {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: rgba(0, 128, 128, 0.76);
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.main-container {
+  display: flex;
+  width: 70%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.nav-bar {
+  margin-right: 4rem;
+}
+
+.nav-btn {
+  padding-left: 2rem;
+  margin: 1rem 2rem;
+  background: none;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.nav-btn:hover,
+.nav-btn:focus {
+  color: rgba(0, 128, 128, 0.788);
+  border-left: 2px solid rgba(0, 128, 128, 0.788);
+  transition: all 0.2s;
+}
+
+.art-container {
+  font-size: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  word-spacing: 0.2rem;
+}
+
+.company-container {
+  margin: 0.5rem 0;
+  background-color: rgba(135, 207, 235, 0.371);
+  padding: 0.5rem;
+}
+
+.company {
+  letter-spacing: 0.2rem;
+  color: skyblue;
+}
+
+.dates {
+  margin: 0.5rem 0;
+  color: #847d7d;
+}
+
+.duty-container {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.arrow-btn {
+  font-size: 2rem;
+  color: rgba(0, 128, 128, 0.788);
+}
+
+.duty {
+  margin-left: 2rem;
 }
